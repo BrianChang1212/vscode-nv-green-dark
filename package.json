@@ -1,9 +1,9 @@
 {
   "name": "nv-green-dark",
   "displayName": "NV Green Dark",
-  "description": "A deep green and graphite VS Code theme with coordinated file and product icons.",
+  "description": "A near-black VS Code theme with vivid green accents and coordinated file and product icons.",
   "icon": "assets/extension-icon.png",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "publisher": "brian-chang",
   "license": "MIT",
@@ -14,7 +14,7 @@
   "activationEvents": ["onCommand:nvGreenDark.applyAll"],
   "scripts": {
     "test": "node --test test/*.test.js",
-    "package:verify": "vsce package --no-dependencies --allow-missing-repository --no-rewrite-relative-links --out release/nv-green-dark-0.1.0.vsix && python tool/verify_vsix.py"
+    "package:verify": "vsce package --no-dependencies --allow-missing-repository --no-rewrite-relative-links --out release/nv-green-dark-0.1.1.vsix && python tool/verify_vsix.py"
   },
   "devDependencies": { "@vscode/vsce": "^4.0.0" },
   "contributes": {

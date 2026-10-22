@@ -20,6 +20,17 @@ test('extension contributes the three coordinated themes and apply command', () 
   assert.ok(manifest.contributes.commands.some((command) => command.command === 'nvGreenDark.applyAll'));
 });
 
+test('release version stays aligned across manifest, lockfile, package command, and verifier', () => {
+  const manifest = readJson('package.json');
+  const lockfile = readJson('package-lock.json');
+  const verifier = fs.readFileSync(path.join(root, 'tool/verify_vsix.py'), 'utf8');
+  assert.equal(manifest.version, '0.1.1');
+  assert.equal(lockfile.version, manifest.version);
+  assert.equal(lockfile.packages[''].version, manifest.version);
+  assert.match(manifest.scripts['package:verify'], /release\/nv-green-dark-0\.1\.1\.vsix/);
+  assert.match(verifier, /nv-green-dark-0\.1\.1\.vsix/);
+});
+
 test('extension icon appears in the package manifest and README', () => {
   const manifest = readJson('package.json');
   const readme = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
@@ -43,6 +54,19 @@ test('dark palette covers workbench, syntax, semantic tokens, and terminal', () 
   assert.ok(theme.semanticHighlighting);
   assert.ok(theme.semanticTokenColors.variable);
   assert.ok(theme.semanticTokenColors.function);
+});
+
+test('matrix-inspired palette keeps black surfaces distinct and green focus visible', () => {
+  const colors = readJson('themes/nv-green-dark-color-theme.json').colors;
+  assert.equal(colors['editor.background'], '#050705');
+  assert.equal(colors['activityBar.background'], '#090D09');
+  assert.equal(colors['sideBar.background'], '#101610');
+  assert.equal(colors['panel.background'], '#0B100B');
+  assert.equal(colors['terminal.background'], '#0B100B');
+  assert.notEqual(colors['editor.background'], colors['sideBar.background']);
+  for (const key of ['focusBorder', 'editorCursor.foreground', 'tab.activeBorderTop', 'list.focusOutline']) {
+    assert.equal(colors[key], '#78F03A', key);
+  }
 });
 
 test('file icons include common development formats and fallback images', () => {
