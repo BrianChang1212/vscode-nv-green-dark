@@ -1,24 +1,24 @@
-﻿# NV Green Dark
+# NV Green Dark
 
-NV Green Dark 是一款供本機安裝的 VS Code 深色主題擴充套件。視覺基準取自 `20261020_Task_Progress_Reports` 的深綠黑底、亮綠色強調與分層面板。
+NV Green Dark is a VS Code theme extension inspired by the deep green backgrounds, bright green accents, and layered panels of `20261020_Task_Progress_Reports`.
 
-## 內容
+## Features
 
-- 色彩主題：工作台、編輯器、終端機、語法與語意標記。
-- 檔案圖示主題：常見程式碼、設定、文件、韌體映像與日誌；其他格式使用通用圖示。
-- 介面圖示主題：常用工作台操作圖示。未覆寫的圖示沿用 VS Code 預設圖示。
-- `NV Green Dark: Apply Complete Theme` 指令：將三種主題寫入使用者層級設定。
+- Color theme for the workbench, editor, terminal, syntax highlighting, and semantic tokens.
+- File icons for common code, configuration, documentation, firmware image, and log files. Other files use a generic icon.
+- Product icons for common workbench actions. Icons without overrides retain the VS Code defaults.
+- `NV Green Dark: Apply Complete Theme` command to set all three themes in user settings.
 
-## 本機使用
+## Local installation
 
-1. 執行 `npm.cmd install`、`npm.cmd test` 與 `npm.cmd run package:verify`。
-2. 執行 `code.cmd --install-extension release/nv-green-dark-0.1.0.vsix`。
-3. 在 VS Code 命令面板執行 `NV Green Dark: Apply Complete Theme`。
+1. Run `npm.cmd install`, `npm.cmd test`, and `npm.cmd run package:verify`.
+2. Run `code.cmd --install-extension release/nv-green-dark-0.1.0.vsix`.
+3. Run `NV Green Dark: Apply Complete Theme` from the VS Code Command Palette.
 
-本指令只在使用者主動執行時變更主題設定。其他擴充套件自行固定樣式的 Webview 不一定會隨色彩主題改變。
+The command changes theme settings only when you run it. Webviews that define their own styles may not follow the color theme.
 
-## 圖示來源與維護
+## Icons and maintenance
 
-SVG 檔案與介面圖示字型均為此專案繪製。介面字型由 `tool/build_product_font.py` 產生；重新產生時需要 `fonttools==4.60.1`。`tool/render_preview.py` 可產生視覺檢查圖，另需 Pillow。
+The SVG files and product icon font were created for this project. Generate the product icon font with `tool/build_product_font.py`; this requires `fonttools==4.60.1`. Generate a visual preview with `tool/render_preview.py`; this also requires Pillow.
 
-本專案是獨立 Git 儲存庫，目前僅規劃本機 VSIX 驗收，沒有公開發佈流程。
+This repository currently supports local VSIX installation and validation. It has no public Marketplace release workflow.
