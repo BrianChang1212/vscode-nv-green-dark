@@ -1,5 +1,7 @@
 # NV Green Dark
 
+![NV Green Dark icon](assets/extension-icon.png)
+
 NV Green Dark is a VS Code theme extension inspired by the deep green backgrounds, bright green accents, and layered panels of `20261020_Task_Progress_Reports`.
 
 ## Features

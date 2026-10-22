@@ -19,6 +19,14 @@ test('extension contributes the three coordinated themes and apply command', () 
   assert.ok(manifest.contributes.commands.some((command) => command.command === 'nvGreenDark.applyAll'));
 });
 
+test('extension icon appears in the package manifest and README', () => {
+  const manifest = readJson('package.json');
+  const readme = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
+  assert.equal(manifest.icon, 'assets/extension-icon.png');
+  assert.ok(fs.existsSync(path.join(root, manifest.icon)));
+  assert.match(readme, /!\[NV Green Dark icon\]\(assets\/extension-icon\.png\)/);
+});
+
 test('dark palette covers workbench, syntax, semantic tokens, and terminal', () => {
   const theme = readJson('themes/nv-green-dark-color-theme.json');
   const colors = theme.colors;

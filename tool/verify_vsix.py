@@ -7,7 +7,7 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "release" / "nv-green-dark-0.1.0.vsix"
-SOURCE_FILES = [ROOT / "package.json", ROOT / "source" / "extension.js"]
+SOURCE_FILES = [ROOT / "package.json", ROOT / "source" / "extension.js", ROOT / "assets" / "extension-icon.png"]
 SOURCE_FILES += list((ROOT / "themes").rglob("*"))
 SOURCE_FILES = [path for path in SOURCE_FILES if path.is_file()]
 EXTRA_FILES = {"extension/readme.md": ROOT / "README.md", "extension/LICENSE.txt": ROOT / "LICENSE"}
