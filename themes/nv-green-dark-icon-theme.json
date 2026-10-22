@@ -1,0 +1,61 @@
+{
+  "hidesExplorerArrows": false,
+  "iconDefinitions": {
+    "_file": { "iconPath": "./icons/file.svg" },
+    "_folder": { "iconPath": "./icons/folder.svg" },
+    "_folderOpen": { "iconPath": "./icons/folder-open.svg" },
+    "_code": { "iconPath": "./icons/code.svg" },
+    "_script": { "iconPath": "./icons/script.svg" },
+    "_python": { "iconPath": "./icons/python.svg" },
+    "_c": { "iconPath": "./icons/c.svg" },
+    "_config": { "iconPath": "./icons/config.svg" },
+    "_json": { "iconPath": "./icons/json.svg" },
+    "_markdown": { "iconPath": "./icons/markdown.svg" },
+    "_document": { "iconPath": "./icons/document.svg" },
+    "_firmware": { "iconPath": "./icons/firmware.svg" },
+    "_log": { "iconPath": "./icons/log.svg" },
+    "_test": { "iconPath": "./icons/test.svg" },
+    "_git": { "iconPath": "./icons/git.svg" },
+    "_image": { "iconPath": "./icons/image.svg" },
+    "_shell": { "iconPath": "./icons/shell.svg" },
+    "_archive": { "iconPath": "./icons/archive.svg" },
+    "_data": { "iconPath": "./icons/data.svg" },
+    "_xml": { "iconPath": "./icons/xml.svg" }
+  },
+  "file": "_file",
+  "folder": "_folder",
+  "folderExpanded": "_folderOpen",
+  "rootFolder": "_folder",
+  "rootFolderExpanded": "_folderOpen",
+  "fileExtensions": {
+    "js": "_script", "jsx": "_script", "mjs": "_script", "cjs": "_script",
+    "ts": "_code", "tsx": "_code", "vue": "_code", "svelte": "_code",
+    "py": "_python", "pyw": "_python",
+    "c": "_c", "cc": "_c", "cpp": "_c", "cxx": "_c", "h": "_c", "hpp": "_c", "rs": "_c",
+    "go": "_code", "java": "_code", "kt": "_code", "swift": "_code",
+    "html": "_xml", "htm": "_xml", "xml": "_xml", "svg": "_xml",
+    "css": "_code", "scss": "_code", "less": "_code",
+    "json": "_json", "jsonc": "_json", "json5": "_json",
+    "yaml": "_config", "yml": "_config", "toml": "_config", "ini": "_config", "cfg": "_config", "conf": "_config",
+    "md": "_markdown", "mdx": "_markdown", "rst": "_markdown",
+    "txt": "_document", "pdf": "_document", "docx": "_document", "pptx": "_document",
+    "hex": "_firmware", "bin": "_firmware", "elf": "_firmware", "uf2": "_firmware", "dfu": "_firmware", "apj": "_firmware", "px4": "_firmware",
+    "log": "_log", "ulg": "_log", "bbl": "_log",
+    "test.js": "_test", "spec.js": "_test", "test.ts": "_test", "spec.ts": "_test",
+    "sh": "_shell", "bash": "_shell", "ps1": "_shell", "bat": "_shell", "cmd": "_shell",
+    "zip": "_archive", "7z": "_archive", "tar": "_archive", "gz": "_archive", "vsix": "_archive",
+    "csv": "_data", "tsv": "_data", "xlsx": "_data", "db": "_data", "sqlite": "_data",
+    "png": "_image", "jpg": "_image", "jpeg": "_image", "webp": "_image", "gif": "_image"
+  },
+  "fileNames": {
+    "README.md": "_markdown", "AGENTS.md": "_markdown", "CHANGELOG.md": "_markdown",
+    "package.json": "_json", "tsconfig.json": "_json",
+    ".gitignore": "_git", ".gitattributes": "_git", ".gitmodules": "_git",
+    "Makefile": "_config", "CMakeLists.txt": "_config", "Kconfig": "_config",
+    "Dockerfile": "_config", ".env.example": "_config"
+  },
+  "folderNames": {
+    ".git": "_git", ".github": "_git", "source": "_folder", "test": "_test",
+    "docs": "_document", "release": "_archive", "resources": "_folder"
+  }
+}

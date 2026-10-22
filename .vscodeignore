@@ -1,0 +1,10 @@
+.git/**
+.github/**
+test/**
+tool/**
+docs/**
+release/**
+node_modules/**
+package-lock.json
+.gitignore
+debug.log

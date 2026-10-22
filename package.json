@@ -1,0 +1,33 @@
+{
+  "name": "nv-green-dark",
+  "displayName": "NV Green Dark",
+  "description": "A deep green and graphite VS Code theme with coordinated file and product icons.",
+  "version": "0.1.0",
+  "private": true,
+  "publisher": "local-themes",
+  "license": "MIT",
+  "engines": { "vscode": "^1.90.0" },
+  "categories": ["Themes"],
+  "extensionKind": ["ui"],
+  "main": "./source/extension.js",
+  "activationEvents": ["onCommand:nvGreenDark.applyAll"],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "package:verify": "vsce package --no-dependencies --allow-missing-repository --out release/nv-green-dark-0.1.0.vsix && python tool/verify_vsix.py"
+  },
+  "devDependencies": { "@vscode/vsce": "^4.0.0" },
+  "contributes": {
+    "commands": [
+      { "command": "nvGreenDark.applyAll", "title": "NV Green Dark: Apply Complete Theme" }
+    ],
+    "themes": [
+      { "label": "NV Green Dark", "uiTheme": "vs-dark", "path": "./themes/nv-green-dark-color-theme.json" }
+    ],
+    "iconThemes": [
+      { "id": "nv-green-dark-icons", "label": "NV Green Dark Icons", "path": "./themes/nv-green-dark-icon-theme.json" }
+    ],
+    "productIconThemes": [
+      { "id": "nv-green-dark-product-icons", "label": "NV Green Dark Product Icons", "path": "./themes/nv-green-dark-product-icon-theme.json" }
+    ]
+  }
+}
