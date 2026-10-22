@@ -9,6 +9,7 @@ const readJson = (relativePath) => JSON.parse(fs.readFileSync(path.join(root, re
 test('extension contributes the three coordinated themes and apply command', () => {
   const manifest = readJson('package.json');
   assert.equal(manifest.displayName, 'NV Green Dark');
+  assert.equal(manifest.publisher, 'brian-chang');
   assert.equal(manifest.contributes.themes.length, 1);
   assert.equal(manifest.contributes.iconThemes.length, 1);
   assert.equal(manifest.contributes.productIconThemes.length, 1);

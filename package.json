@@ -5,7 +5,7 @@
   "icon": "assets/extension-icon.png",
   "version": "0.1.0",
   "private": true,
-  "publisher": "local-themes",
+  "publisher": "brian-chang",
   "license": "MIT",
   "engines": { "vscode": "^1.90.0" },
   "categories": ["Themes"],
